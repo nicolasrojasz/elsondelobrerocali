@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Son del Obrero Cali | Radio de Salsa en Vivo</title>
+  <meta name="description"
+    content="El Son del Obrero Cali Radio: escucha salsa en vivo, disfruta clásicos, entrevistas y la mejor programación salsera con ChaloFM. Pura salsa, pura pasión, pura Cali.">
+  <meta name="keywords"
+    content="El Son del Obrero Cali, radio salsa Cali, emisora de salsa Cali, salsa en vivo Cali, radio online Cali, ChaloFM">
+  <meta name="author" content="El Son del Obrero Cali Radio">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#050505">
+  <!-- Cambiar este dominio por el dominio real antes de publicar -->
+  <link rel="canonical" href="https://www.elsondelobrerocali.com/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="El Son del Obrero Cali Radio">
+  <meta property="og:title" content="El Son del Obrero Cali | Radio de Salsa en Vivo">
+  <meta property="og:description"
+    content="Pura salsa, pura pasión, pura Cali. Escucha El Son del Obrero Cali Radio en vivo.">
+  <meta property="og:url" content="https://www.elsondelobrerocali.com/">
+  <meta property="og:image" content="https://www.elsondelobrerocali.com/assets/banner-principal.webp">
+  <meta property="og:image:alt" content="El Son del Obrero Cali Radio">
+  <meta property="og:locale" content="es_CO">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="El Son del Obrero Cali | Radio de Salsa en Vivo">
+  <meta name="twitter:description" content="Pura salsa, pura pasión, pura Cali. Escucha la emisora en vivo.">
+  <meta name="twitter:image" content="https://www.elsondelobrerocali.com/assets/banner-principal.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <link rel="icon" type="image/webp" href="assets/logo.webp">
+  <link rel="apple-touch-icon" href="assets/logo.webp">
+  <link rel="manifest" href="site.webmanifest">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RadioStation",
+    "@id": "https://www.elsondelobrerocali.com/#radiostation",
+    "name": "El Son del Obrero Cali Radio",
+    "alternateName": "El Son del Obrero",
+    "url": "https://www.elsondelobrerocali.com/",
+    "description": "Emisora de radio online de Cali dedicada a la salsa, clásicos, entrevistas y programación salsera.",
+    "image": "https://www.elsondelobrerocali.com/assets/logo.webp",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.elsondelobrerocali.com/assets/logo.webp"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Cali",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cali",
+        "addressCountry": "CO"
+      }
+    },
+    "sameAs": []
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://www.elsondelobrerocali.com/#website",
+    "url": "https://www.elsondelobrerocali.com/",
+    "name": "El Son del Obrero Cali Radio",
+    "description": "Radio de salsa en vivo desde Cali.",
+    "publisher": {
+      "@id": "https://www.elsondelobrerocali.com/#radiostation"
+    },
+    "inLanguage": "es-CO"
+  }
+  </script>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a href="#inicio" class="brand">
+        <img src="assets/logo.webp" width="800" height="800" alt="Logo de El Son del Obrero Cali Radio">
+      </a>
+      <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+      <nav class="menu">
+        <a href="#inicio">Inicio</a>
+        <a href="#emisora">La emisora</a>
+        <a href="#locutores">Locutores</a>
+        <a href="#programacion">Programación</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <img class="hero-bg" src="assets/banner-principal.webp" width="1800" height="850" alt="" loading="eager"
+        fetchpriority="high" aria-hidden="true">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <span class="eyebrow">CALI • SALSA • PASIÓN</span>
+        <h1>El Son del Obrero Cali</h1>
+        <p class="hero-subtitle">Radio de salsa en vivo • ¡Pura salsa que nos une!</p>
+
+        <div class="player-card">
+          <div class="live-badge"><span></span> EN VIVO</div>
+          <div class="player-copy">
+            <strong>Escucha la emisora</strong>
+            <small>Conéctate al Son del Obrero desde cualquier lugar.</small>
+          </div>
+          <button id="playBtn" class="play-btn">
+            <span class="play-icon">▶</span>
+            ESCUCHAR EN VIVO
+          </button>
+          <audio id="radioPlayer" preload="none"></audio>
+          <div id="playerStatus" class="player-status">Streaming pendiente de configurar</div>
+        </div>
+      </div>
+      <a class="scroll-down" href="#publicidad">↓</a>
+    </section>
+
+    <section id="publicidad" class="ad-section">
+      <div class="container">
+        <div class="section-heading centered">
+          <span>ESPACIO PUBLICITARIO</span>
+          <h2>Tu marca también suena aquí</h2>
+          <p>Espacios listos para banners de nuestros anunciantes.</p>
+        </div>
+        <div class="ad-grid">
+          <div class="ad-slot ad-wide"><span>PUBLICIDAD 970 × 250</span><small>Reemplazar por banner</small></div>
+          <div class="ad-slot"><span>PUBLICIDAD</span><small>Reemplazar por banner</small></div>
+          <div class="ad-slot"><span>PUBLICIDAD</span><small>Reemplazar por banner</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="emisora" class="about section">
+      <div class="container about-grid">
+        <div class="about-image">
+          <img src="assets/logo.webp" width="800" height="800" alt="Logo de El Son del Obrero Cali" loading="lazy">
+        </div>
+        <div class="about-copy">
+          <span class="section-kicker">LA EMISORA</span>
+          <h2>El sonido de Cali, la pasión por la salsa.</h2>
+          <p>
+            ¡Bienvenidos a El Son del Obrero Cali Radio! La emisora donde la salsa se vive con pasión. Con ChaloFM
+            Locutor disfruta de los mejores clásicos, entrevistas y la mejor programación salsera. El Son del Obrero
+            Cali Radio... ¡el son que nos une! Pura salsa, pura pasión, pura Cali.
+          </p>
+          <div class="mini-stats">
+            <div><strong>24/7</strong><span>Conectados</span></div>
+            <div><strong>100%</strong><span>Salsa</span></div>
+            <div><strong>CALI</strong><span>Siempre presente</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="banner-break">
+      <div class="container">
+        <div class="promo-frame">
+          <img src="assets/banner-principal.webp" width="1800" height="850" alt="El Son del Obrero Cali Radio"
+            loading="lazy">
+          <div class="promo-caption">EN TODOS LOS BARRIOS • SOMOS LOS PRIMEROS</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="locutores" class="section dark-section">
+      <div class="container">
+        <div class="section-heading centered light">
+          <span>NUESTRAS VOCES</span>
+          <h2>Conoce a nuestros locutores</h2>
+          <p>Un espacio para presentar a quienes ponen voz y sabor a la emisora.</p>
+        </div>
+
+        <div class="host-card">
+          <div class="host-photo">
+            <img src="assets/locutor-chalo.webp" width="1000" height="715"
+              alt="ChaloFM, locutor de El Son del Obrero Cali" loading="lazy">
+          </div>
+          <div class="host-info">
+            <span class="section-kicker red">LOCUTOR</span>
+            <h3>ChaloFM</h3>
+            <p class="host-role">Locutor de El Son del Obrero Cali</p>
+            <p>
+              Un apasionado de la radio y la música salsera. Con su carisma y experiencia, acompaña a los
+              oyentes con los mejores clásicos, actualidad, entrevistas y mucho sabor caleño.
+            </p>
+            <div class="host-meta">
+              <div><span>PROGRAMA</span><strong>Nombre del programa</strong></div>
+              <div><span>HORARIO</span><strong>Lunes a viernes • 00:00</strong></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="host-placeholder">
+          <span>+</span>
+          <strong>Agregar más locutores</strong>
+          <small>Duplica esta tarjeta y cambia la fotografía e información.</small>
+        </div> -->
+      </div>
+    </section>
+
+    <section id="programacion" class="section schedule-section">
+      <div class="container">
+        <div class="section-heading">
+          <span>AL AIRE</span>
+          <h2>Programación</h2>
+          <p>Una parrilla sencilla para que tus oyentes sepan cuándo encontrarte.</p>
+        </div>
+        <div class="schedule">
+          <div class="schedule-row head"><span>DÍA</span><span>PROGRAMA</span><span>HORARIO</span></div>
+          <div class="schedule-row"><span>Lunes a viernes</span><strong>Nombre del programa</strong><span>08:00 AM -
+              10:00 AM</span></div>
+          <div class="schedule-row"><span>Lunes a viernes</span><strong>Nombre del programa</strong><span>10:00 AM -
+              12:00 PM</span></div>
+          <div class="schedule-row"><span>Sábados</span><strong>Nombre del programa</strong><span>10:00 AM - 01:00
+              PM</span></div>
+          <div class="schedule-row"><span>Domingos</span><strong>Nombre del programa</strong><span>09:00 AM - 12:00
+              PM</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ad-section">
+      <div class="container">
+        <div class="ad-slot-1">
+          <span>¡¡EL SON DEL OBRERO!!</span><small>Tu emisora que siempre te acompaña</small>
+          <video class="ad-video" controls autoplay muted loop>
+            <source src="assets/VW.mp4" type="video/mp4">
+            Tu navegador no soporta videos.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="contact section">
+      <div class="container contact-box">
+        <div>
+          <span class="section-kicker">CONTACTO</span>
+          <h2>Conecta con El Son del Obrero</h2>
+        </div>
+        <div class="contact-actions">
+          <a class="contact-btn whatsapp"
+            href="https://wa.me/+573150701262?text=Hola%2C%20quiero%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20emisora%20El%20Son%20del%20Obrero.">WhatsApp</a>
+          <a class="contact-btn instagram" href="#" onclick="return false;">Instagram</a>
+          <a class="contact-btn facebook" href="#" onclick="return false;">Facebook</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <img src="assets/logo.jpg" alt="El Son del Obrero" class="footer-logo">
+      <div>
+        <strong>EL SON DEL OBRERO CALI</strong>
+        <p>¡Pura salsa que nos une!</p>
+      </div>
+      <small>© 2026 El Son del Obrero. Todos los derechos reservados.</small>
+    </div>
+  </footer>
+
+  <script>
+    // ================================
+    // CONFIGURACIÓN RÁPIDA
+    // ================================
+    // Pega aquí la URL real del streaming.
+    // Ejemplo: https://servidor.com/stream
+    const STREAM_URL = "";
+
+    const player = document.getElementById("radioPlayer");
+    const playBtn = document.getElementById("playBtn");
+    const status = document.getElementById("playerStatus");
+
+    playBtn.addEventListener("click", async () => {
+      if (!STREAM_URL) {
+        status.textContent = "Agrega la URL del streaming en STREAM_URL dentro de script.js.";
+        status.classList.add("error");
+        return;
+      }
+
+      if (player.paused) {
+        player.src = STREAM_URL;
+        try {
+          await player.play();
+          playBtn.querySelector(".play-icon").textContent = "❚❚";
+          playBtn.lastChild.textContent = " PAUSAR";
+          status.textContent = "Reproduciendo en vivo";
+          status.classList.remove("error");
+        } catch (e) {
+          status.textContent = "No fue posible iniciar el streaming.";
+          status.classList.add("error");
+        }
+      } else {
+        player.pause();
+        playBtn.querySelector(".play-icon").textContent = "▶";
+        playBtn.lastChild.textContent = " ESCUCHAR EN VIVO";
+        status.textContent = "Streaming pausado";
+      }
+    });
+
+    document.querySelector(".menu-toggle").addEventListener("click", () => {
+      document.querySelector(".menu").classList.toggle("open");
+    });
+
+    document.querySelectorAll(".menu a").forEach(a => {
+      a.addEventListener("click", () => document.querySelector(".menu").classList.remove("open"));
+    });
+  </script>
+</body>
+
+</html>

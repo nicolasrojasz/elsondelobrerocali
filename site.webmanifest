@@ -1,0 +1,17 @@
+{
+  "name": "El Son del Obrero Cali Radio",
+  "short_name": "El Son del Obrero",
+  "description": "Radio de salsa en vivo desde Cali.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#050505",
+  "lang": "es-CO",
+  "icons": [
+    {
+      "src": "/assets/logo.webp",
+      "sizes": "800x800",
+      "type": "image/webp"
+    }
+  ]
+}
