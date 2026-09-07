@@ -39,49 +39,8 @@
   <link rel="icon" type="image/webp" href="assets/logo.webp">
   <link rel="apple-touch-icon" href="assets/logo.webp">
   <link rel="manifest" href="site.webmanifest">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "RadioStation",
-    "@id": "https://www.elsondelobrerocali.com/#radiostation",
-    "name": "El Son del Obrero Cali Radio",
-    "alternateName": "El Son del Obrero",
-    "url": "https://www.elsondelobrerocali.com/",
-    "description": "Emisora de radio online de Cali dedicada a la salsa, clásicos, entrevistas y programación salsera.",
-    "image": "https://www.elsondelobrerocali.com/assets/logo.webp",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://www.elsondelobrerocali.com/assets/logo.webp"
-    },
-    "areaServed": {
-      "@type": "City",
-      "name": "Cali",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Cali",
-        "addressCountry": "CO"
-      }
-    },
-    "sameAs": []
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "@id": "https://www.elsondelobrerocali.com/#website",
-    "url": "https://www.elsondelobrerocali.com/",
-    "name": "El Son del Obrero Cali Radio",
-    "description": "Radio de salsa en vivo desde Cali.",
-    "publisher": {
-      "@id": "https://www.elsondelobrerocali.com/#radiostation"
-    },
-    "inLanguage": "es-CO"
-  }
-  </script>
-
+  <script src="js/schema-radio.js"></script>
+  <script src="js/schema-website.js"></script>
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -136,10 +95,30 @@
           <h2>Tu marca también suena aquí</h2>
           <p>Espacios listos para banners de nuestros anunciantes.</p>
         </div>
+
         <div class="ad-grid">
-          <div class="ad-slot ad-wide"><span>PUBLICIDAD 970 × 250</span><small>Reemplazar por banner</small></div>
-          <div class="ad-slot"><span>PUBLICIDAD</span><small>Reemplazar por banner</small></div>
-          <div class="ad-slot"><span>PUBLICIDAD</span><small>Reemplazar por banner</small></div>
+
+          <!-- PUBLICIDAD 1 -->
+          <div class="ad-slot ad-wide ad-carousel">
+            <img src="#" alt="Publicidad 1">
+            <img src="#" alt="Publicidad 1">
+            <img src="#" alt="Publicidad 1">
+          </div>
+
+          <!-- PUBLICIDAD 2 -->
+          <div class="ad-slot ad-carousel">
+            <img src="#" alt="Publicidad 2">
+            <img src="#" alt="Publicidad 2">
+            <img src="#" alt="Publicidad 2">
+          </div>
+
+          <!-- PUBLICIDAD 3 -->
+          <div class="ad-slot ad-carousel">
+            <img src="assets/camiseta_anuncio_1.jpeg" alt="Publicidad 3">
+            <img src="assets/camiseta_anuncio_2.jpeg" alt="Publicidad 3">
+            <img src="assets/camiseta_anuncio_3.jpeg" alt="Publicidad 3">
+          </div>
+
         </div>
       </div>
     </section>
@@ -286,8 +265,6 @@
           <h2>Conecta con El Son del Obrero</h2>
         </div>
         <div class="contact-actions">
-          <a class="contact-btn whatsapp"
-            href="https://wa.me/+573150701262?text=Hola%2C%20quiero%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20emisora%20El%20Son%20del%20Obrero.">WhatsApp</a>
           <a class="contact-btn instagram" href="#" onclick="return false;">Instagram</a>
           <a class="contact-btn facebook" href="#" onclick="return false;">Facebook</a>
         </div>
@@ -302,55 +279,16 @@
         <p>¡Pura salsa que nos une!</p>
       </div>
       <small>© 2026 El Son del Obrero. Todos los derechos reservados.</small>
+      <small>Diseñado por nicolas30rojas@gmail.com</small>
     </div>
   </footer>
-  <script>
-    // ================================
-    // CONFIGURACIÓN RÁPIDA
-    // ================================
-    // Pega aquí la URL real del streaming.
-    // Ejemplo: https://servidor.com/stream
-    const STREAM_URL = "https://sonicpanel.totalstreaming.net/8076/stream";
-
-    const player = document.getElementById("radioPlayer");
-    const playBtn = document.getElementById("playBtn");
-    const status = document.getElementById("playerStatus");
-
-    playBtn.addEventListener("click", async () => {
-      if (!STREAM_URL) {
-        status.textContent = "Agrega la URL del streaming en STREAM_URL dentro de script.js.";
-        status.classList.add("error");
-        return;
-      }
-
-      if (player.paused) {
-        player.src = STREAM_URL;
-        try {
-          await player.play();
-          playBtn.querySelector(".play-icon").textContent = "❚❚";
-          playBtn.lastChild.textContent = " PAUSAR";
-          status.textContent = "Reproduciendo en vivo";
-          status.classList.remove("error");
-        } catch (e) {
-          status.textContent = "No fue posible iniciar el streaming.";
-          status.classList.add("error");
-        }
-      } else {
-        player.pause();
-        playBtn.querySelector(".play-icon").textContent = "▶";
-        playBtn.lastChild.textContent = " ESCUCHAR EN VIVO";
-        status.textContent = "Streaming pausado";
-      }
-    });
-
-    document.querySelector(".menu-toggle").addEventListener("click", () => {
-      document.querySelector(".menu").classList.toggle("open");
-    });
-
-    document.querySelectorAll(".menu a").forEach(a => {
-      a.addEventListener("click", () => document.querySelector(".menu").classList.remove("open"));
-    });
-  </script>
+  <!-- BOTÓN FLOTANTE WHATSAPP -->
+  <a href="https://wa.me/+573150701262?text=Hola%2C%20quiero%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20emisora%20El%20Son%20del%20Obrero."
+    class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+    <img src="assets/WhatsApp.svg.webp" alt="WhatsApp">
+  </a>
+  <script src="js/radio.js"></script>
+  <script src="js/publicidad.js"></script>
 </body>
 
 </html>
